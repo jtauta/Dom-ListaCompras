@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>Lista de Mercado</title>
+</head>
+
+<body>
+    <main class="principal2">
+        
+        <h1><img src="./assets/img/canasta.png"> Pagina de compras</h1>
+        <p>Bienvenido, digite el articulo y valor que desee para completar su lista</p>
+        <form id="listado">
+            <div class="grupos2">
+                <div class="grupos">
+                    <h3>Digite el articulo a adicionar</h3>
+                    <table class="tabla2">
+                        <tr>
+                            <td>
+                            <label for="articulo"> Articulo :</label>
+                            <input type="text" id="articulo" placeholder="Ingrese un articulo" required />
+                            <label for="valor"> Valor :</label>
+                            <input type="text" id="valor" value="0" placeholder="Ingrese valor del articulo en $" onkeypress='return event.charCode >= 48 && event.charCode <= 57' style="text-align:right" required />
+                            <button class="boton" type="button" onclick="agregarItem()">Agregar articulo</button>
+                            <button class="boton" type="reset">Resetear</button>
+                        </td>
+                        <tr>
+                            <td>
+                                <small>Por favor teclee el nombre del producto y su valor</small>
+                            </td>
+                        </tr>
+                        </tr>
+                    </table>
+                    <hr>
+                    <h3>Lista de articulos seleccionados</h3>
+                    <table class="tabla">
+                        <thead>
+                            <tr>
+                                <th>Articulos (precio)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <ul id="lista"></ul>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <div>
+                        <label for="cantidad"> Cantidad de Articulos :</label>
+                        <input type="text" id="cantidad" value="0" disabled=true style="text-align:right"/>
+                        <br>
+                        <label for="total"> Valor Total Articulos :</label>
+                        <input type="text" id="total" value="0" disabled=true hidden="true" />
+                        <input type="text" id="totalformated" value="0" disabled=true style="text-align:right"/>
+                        <br>
+                        <input type="checkbox" id="aceptacero" value="1"> Aceptar articulos con precio cero $0
+                    </div>
+        
+                </div>
+                <div>
+                    <input type="text" class="messageerror" id="messageerror" disabled=true />
+                </div>
+    
+                </div>
+        </form>
+    </main>
+    <script src="./assets/js/compras.js"></script>
+</body>
+
+</html>

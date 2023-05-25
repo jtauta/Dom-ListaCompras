@@ -1,0 +1,79 @@
+.principal {
+    padding: 40px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.principal2 {
+    padding: 40px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+
+.titulos {
+    font-size: 40px;
+}
+
+.subtitulos {
+    font-size: 25px;
+}
+
+.grupos {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #0099CC;
+    background: #ebe7e7;;
+}
+
+.grupos2 {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #0099CC;
+    background: #ebe7e7;;
+}
+
+
+.impar {
+    padding: 3px;
+    margin: 2px;
+    background: #e2dddd;
+    color: #0099CC;
+}
+.par {
+    padding: 3px;
+    margin: 2px;
+    background: #f1eded;
+    color: #0099CC;
+}
+
+.boton{
+    color: #0099CC;
+    background: transparent;
+    border: 2px solid #0099CC;
+    border-radius: 6px;
+
+}
+.boton:hover {
+    background: #2079b0;
+    background-image: linear-gradient(to bottom, #ddecf5, #94b3eb);
+    text-decoration: none;
+  }
+
+.tabla {
+    border: 1px solid #2079b0;
+    margin-left: 10px;
+    margin-right: auto;
+}
+.tabla2 {
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.messageerror{
+    color: red;
+    background-color: transparent;
+    border: 0px;
+    margin-left: 5px;
+    margin-right: 5px;;
+}
