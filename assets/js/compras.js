@@ -12,11 +12,13 @@ function agregarItem() {
     if (item.value != "" && ((valor.value > 0 && !document.getElementById('aceptacero').checked) || (valor.value >= 0 && document.getElementById('aceptacero').checked))) {
         document.getElementById("messageerror").value = "";
         vcantidad = parseInt(document.getElementById("cantidad").value)
+        var elemento = document.createTextNode(item.value + " (" + new Intl.NumberFormat('en-US', { style: "currency", "currency": "COP" }).format(valor.value) + ")");
+// colocar color a la lista
         if (vcantidad % 2 == 0) {
-            nuevoItem.appendChild(document.createTextNode(item.value + " (" + new Intl.NumberFormat('en-US', { style: "currency", "currency": "COP" }).format(valor.value) + ")"));
+            nuevoItem.appendChild(elemento);
             lista.appendChild(nuevoItem);
         } else {
-            nuevoItem2.appendChild(document.createTextNode(item.value + " (" + new Intl.NumberFormat('en-US', { style: "currency", "currency": "COP" }).format(valor.value) + ")"));
+            nuevoItem2.appendChild(elemento);
             lista.appendChild(nuevoItem2);
         }
         sumar();
@@ -30,6 +32,17 @@ function agregarItem() {
         }
     }
 
+    // validar si esta repetido
+    var array = arrayFromList('lista'); 
+    array.forEach((element) => {
+        console.log(element);
+        console.log(elemento);
+        if (element == elemento){
+            console.log("repetido")
+        }
+      })
+ 
+
     function sumar() {
         vtotal = parseInt(document.getElementById("valor").value) + parseInt(document.getElementById("total").value);
         document.getElementById("total").value = vtotal;
@@ -41,5 +54,9 @@ function agregarItem() {
         document.getElementById("cantidad").value = vcantidad;
     }
 
+    function arrayFromList(id) {
+        var dataElement = [...document.querySelectorAll(`#${id} li`)].map(element => element.innerText);     
+        return dataElement;
+    }
 
 }
